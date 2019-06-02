@@ -1,23 +1,23 @@
-import React from 'react';
-import Input from './Input';
-import { validate, convertToHex as convert } from '../utils';
+import React from "react";
+import Input from "./Input";
+import { validate, convertToHex as convert } from "../utils";
 
 export default class Gradient extends React.Component {
   state = {
     inputFrom: {
-      type: 'hex',
-      color: '#ffff00',
-      isValid: true,
+      type: "hex",
+      color: "#ffff00",
+      isValid: true
     },
     inputTo: {
-      type: 'hex',
-      color: '#000044',
-      isValid: true,
+      type: "hex",
+      color: "#000044",
+      isValid: true
     },
     gradient: {
-      from: '#ffff00',
-      to: '#000044',
-    },
+      from: "#ffff00",
+      to: "#000044"
+    }
   };
 
   onAddColor = (id, color) =>
@@ -29,18 +29,18 @@ export default class Gradient extends React.Component {
       inputFrom: { type: typeFrom, color: colorFrom },
       inputTo: { type: typeTo, color: colorTo },
       inputFrom,
-      inputTo,
+      inputTo
     } = this.state;
     this.setState(
       {
         inputFrom: {
           ...inputFrom,
-          isValid: validate(colorFrom, typeFrom),
+          isValid: validate(colorFrom, typeFrom)
         },
         inputTo: {
           ...inputTo,
-          isValid: validate(colorTo, typeTo),
-        },
+          isValid: validate(colorTo, typeTo)
+        }
       },
       () =>
         this.state.inputFrom.isValid &&
@@ -48,9 +48,9 @@ export default class Gradient extends React.Component {
         this.setState({
           gradient: {
             from: convert(colorFrom, typeFrom),
-            to: convert(colorTo, typeTo),
-          },
-        }),
+            to: convert(colorTo, typeTo)
+          }
+        })
     );
   };
 
@@ -58,7 +58,11 @@ export default class Gradient extends React.Component {
     this.setState({ [id]: { ...this.state[id], type } });
 
   render() {
-    const { inputFrom, inputTo, gradient: { from, to } } = this.state;
+    const {
+      inputFrom,
+      inputTo,
+      gradient: { from, to }
+    } = this.state;
     const divStyle = { background: `linear-gradient(${from}, ${to})` };
     return (
       <div className="form" style={divStyle}>
@@ -68,24 +72,24 @@ export default class Gradient extends React.Component {
             isValid={inputFrom.isValid}
             type={inputFrom.type}
             selectValue={inputFrom.type}
-            onAddColor={e => this.onAddColor('inputFrom', e.target.value)}
+            onAddColor={e => this.onAddColor("inputFrom", e.target.value)}
             onPicColor={color => {
-              this.onAddColor('inputFrom', color.hex);
-              this.onSelectType('inputFrom', 'hex');
+              this.onAddColor("inputFrom", color.hex);
+              this.onSelectType("inputFrom", "hex");
             }}
-            onSelectType={e => this.onSelectType('inputFrom', e.target.value)}
+            onSelectType={e => this.onSelectType("inputFrom", e.target.value)}
           />
           <Input
             color={inputTo.color}
             isValid={inputTo.isValid}
             type={inputTo.type}
             selectValue={inputTo.type}
-            onAddColor={e => this.onAddColor('inputTo', e.target.value)}
+            onAddColor={e => this.onAddColor("inputTo", e.target.value)}
             onPicColor={color => {
-              this.onAddColor('inputTo', color.hex);
-              this.onSelectType('inputTo', 'hex');
+              this.onAddColor("inputTo", color.hex);
+              this.onSelectType("inputTo", "hex");
             }}
-            onSelectType={e => this.onSelectType('inputTo', e.target.value)}
+            onSelectType={e => this.onSelectType("inputTo", e.target.value)}
           />
           <input className="button" type="submit" value="Go" />
         </form>

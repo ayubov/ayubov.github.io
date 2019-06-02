@@ -1,123 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
 
 body {
-    background-color: black; 
-    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: "Titillium Web", sans-serif;
 }
 
-h2 { 
-    margin: auto;
-    width: 100px;
-    color: white;
-}
-
-h2.rotate {
-    margin-top: 300px;
-}
-
-.rotate:hover {
-    /* -webkit-transform: rotateZ(-30deg);
-    -ms-transform: rotateZ(-30deg); */
-    transform: rotateZ(-30deg);
-}
-
-.links {
-    color: #d8d8d6;
-    margin-left: 2px;
-    
-}
-
-ul {
-    text-align: right;
-}
-
-li {
-    list-style-type: none;
-    display: inline; 
-    margin-right: 5px; 
-    border: 1px solid #000;
-    padding: 3px; 
-    color: white;
-}
-
-hr {
-    border: none;
-    color: grey; 
-    background-color: grey;
-    height: 1px; 
-}
-
-.app {
-    background-color: black;
-    width: 600px;
-    margin: auto;
-    min-height: 100vh;
-}
-
-.apps {
-    background-color: white;
-    color: black;
-}
-
-/* for app */
-
-.radio-group > div {
-  background: white;
-  font-family: roboto;
-  color: black;
-}
-
-.radio-group > input[type=radio] {
+.form {
   position: absolute;
-  visibility: hidden;
-  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.radio-group > label {
-  color: black;
-  display: inline-block;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 5px 20px;
+.invalid > input {
+  border: 2px solid red;
 }
-
-.radio-group > input[type=radio]:checked + label{
-  color: white;
-  background: black;
-}
-
-.radio-group > label + input[type=radio] + label {
-  border-left: solid 3px black;
-}
-.radio-group {
-  border: solid 3px black;
-  display: inline-block;
-  margin: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.searcher {
-    margin-top: 50px;
-}
-
-.sorry {
-    /* margin-top: 150px; */
-    color: grey !important;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
- .form {
-    position: absolute; 
-    top: 0; 
-    right: 0; 
-    bottom: 0; 
-    left: 0;
-}
-
- .invalid > input {
-    border: 2px solid red;
-}
- .invalid {
-    color: red
+.invalid {
+  color: red;
 }
