@@ -2,7 +2,7 @@
   "name": "b",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ayubov.com",
+  "homepage": "https://ayubov.com",
   "dependencies": {
     "css-color-keywords": "^1.0.0",
     "fontfaceobserver": "^2.1.0",
@@ -37,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.0.1"
   }
 }
