@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "12623e956d57f33e6c49b8245665a5c3",
+    "revision": "5e90d1af83ffa52592a4d5d7bd525562",
     "url": "/index.html"
   },
   {
-    "revision": "88bd40037007f7836b8e",
+    "revision": "ed2978ef14027e1a6ead",
     "url": "/static/css/main.17346e0d.chunk.css"
   },
   {
-    "revision": "9483a1d6f07b27d5865f",
-    "url": "/static/js/2.f38b96c7.chunk.js"
+    "revision": "9e1f2db7bf76afcdf6ad",
+    "url": "/static/js/2.db5c4242.chunk.js"
   },
   {
-    "revision": "88bd40037007f7836b8e",
-    "url": "/static/js/main.c45fd23f.chunk.js"
+    "revision": "ed2978ef14027e1a6ead",
+    "url": "/static/js/main.08e6b5ab.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -22,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4d98d4d7e792be26099813401e3aa24f",
     "url": "/static/media/alvi.4d98d4d7.jpg"
+  },
+  {
+    "revision": "2f441f90a57c4b56475263d687ce55a6",
+    "url": "/static/media/alvi_light.2f441f90.jpg"
   },
   {
     "revision": "3d5c34e2c483e9b3ece20382ca105c67",
@@ -46,5 +50,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8c181386b04883c9f651cc29b1f0dafb",
     "url": "/static/media/tony.8c181386.jpg"
+  },
+  {
+    "revision": "1378b47496246ea42f6f117c8728bbaf",
+    "url": "/static/media/tony_light.1378b474.jpg"
   }
 ]);
